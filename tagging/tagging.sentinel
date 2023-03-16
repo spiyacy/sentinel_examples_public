@@ -75,8 +75,8 @@ for tags as key, value {
 					}
 					## Check owner for blank value as well as regex requirements
 					if key is "owner" {
-						if strings.to_lower(value) not matches "[a-z0-9]+@hashitest.com" {
-							print("Resource", addr, "has tag 'owner' with value:", value, ". It must contain five alphabetic characters.", "\n")
+						if strings.to_lower(value) not matches "[a-z0-9]+@hashicorp.com" {
+							print("Resource", addr, "has tag 'owner' with value:", value, ". - email domain not valid.", "\n")
 							validated = false
 						}
 					}
