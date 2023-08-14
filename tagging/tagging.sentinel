@@ -38,7 +38,6 @@ allAzureResourcesWithStandardTags =
 violatingAzureResources =
       plan.filter_attribute_not_contains_list(allAzureResourcesWithStandardTags,
                     "tags", mandatory_tags, true)
-print("Violating Resources (If any) : ", violatingAzureResources)
 
 # Set Default check to true
 validated = true
@@ -78,7 +77,7 @@ for tags as key, value {
 					## Check owner for blank value as well as regex requirements
 					if key is "owner" {
 						if strings.to_lower(value) not matches "[a-z0-9]+@hashicorp.com" {
-							print("Resource", addr, "has tag 'owner' with value:", value, ". - email domain not valid.", "\n")
+							print("Resource", addr, "has tag 'owner' with value:", value, ". \n Error: Email domain not valid.", "\n")
 							validated = false
 						}
 					}
