@@ -38,6 +38,7 @@ allAzureResourcesWithStandardTags =
 violatingAzureResources =
       plan.filter_attribute_not_contains_list(allAzureResourcesWithStandardTags,
                     "tags", mandatory_tags, true)
+print("Violating Resources (If any) : ", violatingAzureResources)
 
 # Set Default check to true
 validated = true
