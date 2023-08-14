@@ -17,6 +17,7 @@ resource_types = [
   #"azurerm_windows_virtual_machine",
   #"azurerm_virtual_network",
   "azurerm_key_vault",
+  "azurerm_network_security_group",
 ]
 
 # List of mandatory tags
